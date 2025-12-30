@@ -118,6 +118,7 @@ export default function AdminClient({
             className="flex flex-col p-4 border border-gray-500/40 rounded-lg"
           >
             <div>
+              ICON:
               <input
                 value={feat.icon}
                 onChange={(e) =>

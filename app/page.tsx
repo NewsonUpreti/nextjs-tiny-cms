@@ -22,7 +22,9 @@ export default async function Home() {
           // Cast explicitly to React component type
           const IconComponent =
             f.icon && LucideIcons[f.icon as keyof typeof LucideIcons]
-              ? (LucideIcons[f.icon as keyof typeof LucideIcons] as React.ComponentType<LucideProps>)
+              ? (LucideIcons[
+                  f.icon as keyof typeof LucideIcons
+                ] as React.ComponentType<LucideProps>)
               : null;
 
           return (
@@ -30,7 +32,9 @@ export default async function Home() {
               key={f.id}
               className="flex items-center gap-4 p-4 border border-gray-500/40 rounded-lg"
             >
-              {IconComponent && <IconComponent className="w-6 h-6 text-blue-500" />}
+              {IconComponent && (
+                <IconComponent className="w-6 h-6 text-blue-500" />
+              )}
               <div className="flex flex-col">
                 <h2 className="font-bold text-lg">{f.title}</h2>
                 <p className="text-gray-700">{f.description}</p>
